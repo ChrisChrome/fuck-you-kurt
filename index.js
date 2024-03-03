@@ -1,12 +1,12 @@
 const config = require("./config.json");
 const Discord = require("discord.js");
-const client = new Discord.Client({ intents: ["MessageContent", "GUildMessages", "Guilds", "GuildMembers" ] })
+const client = new Discord.Client({ intents: ["MessageContent", "GuildMessages", "Guilds", "GuildMembers" ] })
 
 client.on("ready", () => {
 	console.log("Bot is ready");
 });
 
-var bannedWordsRegex = /\b(?:murder|kill|assassinate|slay|terminate|execute|eliminate|dispatch|eradicate|annihilate|destroy|whack|liquidate|neutralize|dispatch)\b/i;
+var bannedWordsRegex = /\b(?:murder|kill|assassinate|slay|terminate|execute|eliminate|dispatch|eradicate|annihilate|destroy|whack|liquidate|neutralize|dispatch|unalive)\b/i;
 
 client.on("messageCreate", (message) => {
 	// We are targetting you Kurt.
